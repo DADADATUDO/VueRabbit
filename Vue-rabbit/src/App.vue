@@ -1,9 +1,32 @@
 <script setup>
+import MainPage from './components/mainPage/mainPage.vue';
 
 </script>
 
 <template>
-  <div>dadadii</div>
+
+  <MainPage></MainPage>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
+  <div>a</div>
 </template>
 
 <style scoped></style>
