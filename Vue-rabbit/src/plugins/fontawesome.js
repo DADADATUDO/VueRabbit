@@ -8,9 +8,18 @@ import {
   faMagnifyingGlassPlus,
   faChevronRight,
   faChevronLeft,
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 // 将图标添加到库中
-library.add(faUser, faLock, faSearch, faChevronRight, faChevronLeft, faMagnifyingGlassPlus);
+library.add(
+  faUser,
+  faLock,
+  faSearch,
+  faChevronRight,
+  faPhone,
+  faChevronLeft,
+  faMagnifyingGlassPlus
+);
 
 export default {
   install: (app) => {

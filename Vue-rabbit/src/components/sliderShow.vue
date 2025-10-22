@@ -18,7 +18,7 @@ const props = defineProps({
     },
     height: {
         type: String,
-        default: '500px'
+        default: '50rem' /* 500px -> 50rem */
     },
     interval: {
         type: Number,
@@ -119,7 +119,7 @@ onUnmounted(() => {
         </div>
 
         <!-- 左右切换按钮 -->
-        <button class="carousel-btn, prev-btn" v-show="!isSingle" @click="prevSlide" aria-label="上一张">
+        <button class="carousel-btn prev-btn" v-show="!isSingle" @click="prevSlide" aria-label="上一张">
             <FontAwesomeIcon icon="chevron-left" size="2x" />
         </button>
         <button class="carousel-btn next-btn" v-show="!isSingle" @click="nextSlide" aria-label="下一张">
@@ -168,8 +168,8 @@ onUnmounted(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 4.8rem; /* 48px -> 4.8rem */
+    height: 4.8rem; /* 48px -> 4.8rem */
     border-radius: 50%;
     color: aliceblue;
     cursor: pointer;
@@ -195,26 +195,26 @@ onUnmounted(() => {
 }
 
 .prev-btn {
-    left: 16px;
+    left: 1.6rem; /* 16px -> 1.6rem */
 }
 
 .next-btn {
-    right: 16px;
+    right: 1.6rem; /* 16px -> 1.6rem */
 }
 
 .carousel-indicators {
     position: absolute;
-    bottom: 20px;
+    bottom: 2rem; /* 20px -> 2rem */
     display: flex;
-    gap: 8px;
+    gap: 0.8rem; /* 8px -> 0.8rem */
     left: 50%;
-    /* transform: translateX(-50%); */
+    transform: translateX(-50%); /* 修复：添加居中定位 */
     z-index: 10;
 }
 
 .indicator-dot {
-    width: 10px;
-    height: 10px;
+    width: 1rem; /* 10px -> 1rem */
+    height: 1rem; /* 10px -> 1rem */
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
@@ -224,7 +224,7 @@ onUnmounted(() => {
 
 .indicator-dot.active {
     background-color: #ff6900;
-    width: 30px;
-    border-radius: 5px;
+    width: 3rem; /* 30px -> 3rem */
+    border-radius: 0.5rem; /* 5px -> 0.5rem */
 }
 </style>

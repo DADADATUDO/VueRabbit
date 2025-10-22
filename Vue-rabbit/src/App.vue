@@ -1,32 +1,10 @@
 <script setup>
-import MainPage from './components/mainPage/mainPage.vue';
-
+import { RouterView } from 'vue-router'; // 导入 RouterView，使 <RouterView /> 可用
 </script>
 
 <template>
-
-  <MainPage></MainPage>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
-  <div>a</div>
+  <!-- <MainPage></MainPage> -->
+  <RouterView />
 </template>
 
 <style scoped></style>

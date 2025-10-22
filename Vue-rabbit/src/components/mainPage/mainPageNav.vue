@@ -37,7 +37,7 @@ const handleScroll = () => {
         isScroll.value = false
     }
     lastScrollTop.value = scrollTop
-    /* 
+    /*
         lastScrollTop 记录当前的滚动位置
         if (scrollTop > lastScrollTop.value) {
         // 向下滚动（当前位置比上一次更靠下）
@@ -92,13 +92,12 @@ onUnmounted(() => {
 
 <style>
 .nav-wrapper {
-    width: 100vw;
-    height: 65px;
+    width: 100%;
+    height: 6.5rem; /* 65px -> 6.5rem */
     color: rgb(255, 255, 255);
     position: relative;
 }
 
-/* 增强：确保固定时位于视口最上层并占满宽度 */
 .nav-fixed {
     position: fixed;
     top: 0;
@@ -107,8 +106,8 @@ onUnmounted(() => {
     width: 100%;
     z-index: 1000;
     background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0.5rem); /* 5px -> 0.5rem */
+    box-shadow: 0 0.2rem 1rem rgba(255, 255, 255, 0.1); /* 2px 10px -> 0.2rem 1rem */
     transform: translateZ(0);
 }
 
@@ -117,17 +116,22 @@ onUnmounted(() => {
 }
 
 
+/* 修改为响应式容器：100% 宽度 + max-width 居中 + 内边距保证小屏不会紧贴边缘 */
 .nav-container {
-    width: 1440px;
-    height: 65px;
+    width: 100%;
+    max-width: 120rem; /* 1200px -> 120rem */
+    /* 根据需要调整最大宽度 */
+    padding: 0 1.6rem; /* 16px -> 1.6rem */
+    box-sizing: border-box;
+    height: 6.5rem; /* 65px -> 6.5rem */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
 .icon-container {
-    height: 65px;
-    width: 60px;
+    height: 6.5rem; /* 65px -> 6.5rem */
+    width: 6rem; /* 60px -> 6rem */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,15 +149,15 @@ onUnmounted(() => {
 
 .icon-container img {
     display: block;
-    width: 34px;
-    height: 34px;
+    width: 3.4rem; /* 34px -> 3.4rem */
+    height: 3.4rem; /* 34px -> 3.4rem */
 }
 
 .nav-menu {
-    height: 65px;
-    max-width: 1200px;
-    text-align: center;
+    height: 6.5rem; /* 65px -> 6.5rem */
+    flex: 1;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -164,9 +168,9 @@ onUnmounted(() => {
 
 /* 如果需要对 router-link 单独样式，添加 .nav-link */
 .nav-link {
-    line-height: 65px;
-    height: 65px;
-    padding: 0 20px;
+    line-height: 6.5rem; /* 65px -> 6.5rem */
+    height: 6.5rem; /* 65px -> 6.5rem */
+    padding: 0 2rem; /* 20px -> 2rem */
     white-space: nowrap;
     color: inherit;
     /* 继承 nav-wrapper 的颜色 */
@@ -174,19 +178,19 @@ onUnmounted(() => {
 }
 
 .login-info {
-    height: 65px;
-    width: 110px;
+    height: 6.5rem; /* 65px -> 6.5rem */
+    width: 11rem; /* 110px -> 11rem */
     text-align: center;
-    line-height: 65px;
+    line-height: 6.5rem; /* 65px -> 6.5rem */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .separator {
-    border-left: 2px solid #999;
-    height: 16px;
-    margin: 0px 0px 2px 0px;
+    border-left: 0.2rem solid #999; /* 2px -> 0.2rem */
+    height: 1.6rem; /* 16px -> 1.6rem */
+    margin: 0rem 0rem 0.2rem 0rem; /* 2px -> 0.2rem */
 }
 
 a:hover {

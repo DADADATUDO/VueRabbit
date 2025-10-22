@@ -12,6 +12,6 @@ import segBar from '@/assets/images/mainPage/segBar.jpg';
 <style>
 .segBar-container {
     width: 100%;
-    height: 20px;
+    height: 2rem; /* 20px -> 2rem */
 }
 </style>

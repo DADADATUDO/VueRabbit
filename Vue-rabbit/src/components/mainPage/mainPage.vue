@@ -3,6 +3,8 @@
 import MainPageNav from './mainPageNav.vue';
 import SliderShow from '../sliderShow.vue'; // 新增：导入轮播组件
 import SegBar from '@/components/segBar.vue';
+import footerNavArea from '@/components/footerNavArea.vue';
+import footerInfo from '@/components/footer.vue';
 
 // 将相对字符串替换为通过 import 导入的资源，构建工具会返回正确的 URL
 import phone1 from '@/assets/images/mainPage/001.jpg';
@@ -80,22 +82,25 @@ const ecosystemSlides = [
 
 <template>
   <MainPageNav></MainPageNav>
-  <SliderShow :slides="phoneSlides" :width="'100%'" :height="'855px'" :interval="3000" :duration="900" />
+  <SliderShow :slides="phoneSlides" :width="'100%'" :height="'85.5rem'" :interval="3000" :duration="900" />
   <SegBar></SegBar>
-  <SliderShow :slides="carSlides" :width="'100%'" :height="'855px'" :interval="3000" :duration="900" />
+  <SliderShow :slides="carSlides" :width="'100%'" :height="'85.5rem'" :interval="3000" :duration="900" />
   <SegBar></SegBar>
-  <SliderShow :slides="padSlides" :width="'100%'" :height="'855px'" :interval="3000" :duration="900" />
+  <SliderShow :slides="padSlides" :width="'100%'" :height="'85.5rem'" :interval="3000" :duration="900" />
   <SegBar></SegBar>
-  <SliderShow :slides="redMiSlides" :width="'100%'" :height="'855px'" :interval="3000" :duration="900" />
+  <SliderShow :slides="redMiSlides" :width="'100%'" :height="'85.5rem'" :interval="3000" :duration="900" />
   <SegBar></SegBar>
-  <SliderShow :slides="jiadianSlides" :width="'100%'" :height="'855px'" :interval="3000" :duration="900" />
+  <SliderShow :slides="jiadianSlides" :width="'100%'" :height="'85.5rem'" :interval="3000" :duration="900" />
   <SegBar></SegBar>
-  <SliderShow :slides="raceSlides" :width="'100%'" :height="'855px'" :interval="3000" :duration="900" />
+  <SliderShow :slides="raceSlides" :width="'100%'" :height="'85.5rem'" :interval="3000" :duration="900" />
   <SegBar></SegBar>
-  <SliderShow :slides="leikaSlides" :width="'100%'" :height="'855px'" :interval="3000" :duration="900" />
+  <SliderShow :slides="leikaSlides" :width="'100%'" :height="'85.5rem'" :interval="3000" :duration="900" />
   <SegBar></SegBar>
-  <SliderShow :slides="ecosystemSlides" :width="'100%'" :height="'855px'" :interval="3000" :duration="900" />
-
+  <SliderShow :slides="ecosystemSlides" :width="'100%'" :height="'85.5rem'" :interval="3000" :duration="900" />
+  <SegBar></SegBar>
+  <SegBar></SegBar>
+  <footerNavArea></footerNavArea>
+  <footerInfo></footerInfo>
 
 </template>
 
