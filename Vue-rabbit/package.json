@@ -8,6 +8,10 @@
   },
   "scripts": {
     "dev": "vite",
+    "test": "vite --mode test",
+    "prod": "vite --mode production",
+    "build:dev": "vite build --mode development",
+    "build:test": "vite build --mode test",
     "build": "vite build",
     "preview": "vite preview",
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",

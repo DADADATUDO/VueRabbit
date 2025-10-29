@@ -1,0 +1,30 @@
+@use '../var.scss' as define;
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': define.$primary-color,
+      // 自定义主色
+    ),
+    'success': (
+      'base': define.$success-color,
+      // 自定义成功色,
+    ),
+    'warning': (
+      'base': define.$warning-color,
+      // 修正为合法颜色
+    ),
+    'danger': (
+      'base': define.$danger-color,
+      // 自定义危险色
+    ),
+    'error': (
+      'base': define.$error-color,
+      // 自定义错误色
+    ),
+    'info': (
+      'base': define.$info-color,
+    ),
+  )
+);
+
+@use 'element-plus/theme-chalk/src/index.scss' as *;

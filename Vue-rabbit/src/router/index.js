@@ -6,4 +6,6 @@ const router = createRouter({
   routes,
 });
 
-export default router;
+export function setup(app) {
+  app.use(router);
+}

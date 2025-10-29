@@ -1,7 +1,4 @@
 import { fileURLToPath, URL } from "node:url";
-import AutoImport from "unplugin-auto-import/vite";
-import Components from "unplugin-vue-components/vite";
-import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
@@ -11,20 +8,6 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
-    AutoImport({
-      resolvers: [
-        ElementPlusResolver({
-          importStyle: "sass",
-        }),
-      ],
-    }),
-    Components({
-      resolvers: [
-        ElementPlusResolver({
-          importStyle: "sass",
-        }),
-      ],
-    }),
   ],
   resolve: {
     alias: {
@@ -34,8 +17,10 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // 如需自定义Element Plus主题变量，可在此配置
-        // additionalData: `@use "@/styles/element/index.scss" as *;`
+        additionalData: `
+
+        @use "@/styles/var.scss" as *;
+        `,
       },
     },
   },

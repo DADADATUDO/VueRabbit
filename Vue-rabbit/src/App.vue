@@ -3,7 +3,6 @@ import { RouterView } from 'vue-router'; // 导入 RouterView，使 <RouterView 
 </script>
 
 <template>
-  <!-- <MainPage></MainPage> -->
   <RouterView />
 </template>
 
