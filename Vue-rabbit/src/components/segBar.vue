@@ -3,16 +3,16 @@
 </script>
 
 <template>
-    <div class="segBar-container">
-    </div>
 
-
+  <div class="divider">
+    <el-divider />
+  </div>
 </template>
 
-<style>
-.segBar-container {
-    width: 100%;
-    height: 2rem;
-    background-color: rgba(192, 182, 182, 0.2);
+<style scoped lang="scss">
+.divider {
+  .el-divider--horizontal {
+    margin: 2rem 0;
+  }
 }
 </style>

@@ -7,6 +7,7 @@ import { onMounted } from 'vue';
 import LayoutFooter from './components/LayoutFooter.vue';
 import LayoutFooterInfo from './components/LayoutFooterInfo.vue';
 
+
 const categoryStore = useCategoryStore();
 
 onMounted(() => {
@@ -20,6 +21,8 @@ onMounted(() => {
     <SegBar></SegBar>
     <LayoutFooter></LayoutFooter>
     <LayoutFooterInfo></LayoutFooterInfo>
+    <el-backtop :right="100" :bottom="100" />
+
 </template>
 
 

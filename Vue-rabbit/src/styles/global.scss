@@ -14,7 +14,7 @@ body {
   font-size: 1.4rem;
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
     "微软雅黑", Arial, sans-serif;
-  background-color: var(--bg-color);
+  background-color: var(--el-bg-color);
   color: var(--el-text-color-regular);
   min-width: 1240px;
 }
@@ -26,8 +26,27 @@ body {
 }
 
 a {
-  color: #000000;
+  color: var(--el-text-color-primary);
   text-decoration: none;
+}
+
+a:hover{
+  color: var(--el-color-primary);
+}
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ellipsis-2 {
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 ul,
@@ -42,6 +61,6 @@ li {
   padding: 0;
 }
 
-.nav-link:hover {
-  color: xtxColor;
-}
+
+
+

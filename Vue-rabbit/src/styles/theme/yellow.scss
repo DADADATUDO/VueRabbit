@@ -1,0 +1,36 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:color';
+
+html.yellow {
+  --el-bg-color: #ffffff;
+  --el-bg-color-overlay: #ffffff;
+  --el-text-color-primary: #303133;
+  --el-text-color-regular: #606266;
+  --el-text-color-secondary: #909399;
+  --el-text-color-placeholder: #a8abb2;
+  $el-bg: white;
+
+  $colors: (
+          'white': #ffffff,
+          'black': #000000,
+          'primary': #f9a51f,
+          'success': #67c23a,
+          'warning': #e6a23c,
+          'danger': #f56c6c,
+          'error': #f56c6c,
+          'info': #909399,
+  );
+  $color-black: map.get($colors, 'black');
+  --el-color-black: #{$color-black};
+  @each $type in (primary, success, warning, danger, error, info) {
+    $color: map.get($colors, $type);
+    --el-color-#{$type}: #{$color};
+    @each $i in (3, 5, 7, 8, 9) {
+      $weight: math.percentage(math.div($i, 10));
+      $value: color.mix($el-bg, $color, $weight);
+      --el-color-#{$type}-light-#{$i}: #{$value};
+    }
+    --el-color-#{$type}-dark-2: #{color.mix(#ffffff, $color, math.percentage(math.div(2, 10)))};
+  }
+}

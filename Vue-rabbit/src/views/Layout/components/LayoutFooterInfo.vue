@@ -34,8 +34,8 @@
 <style lang="scss" scoped>
 .footer-wrapper {
     width: 100%;
-    height: 25rem;
-    background-color: rgba(2, 2, 2, 0.8);
+    height: 23rem;
+    background-color: var(--el-bg-color);
 }
 
 .footer-container {
@@ -50,7 +50,7 @@
 
 .item {
     width: 100%;
-    height: 15rem;
+    height: 10rem;
     // background-color: blueviolet;
     display: flex;
     flex-direction: row;
@@ -71,13 +71,13 @@
     i {
         font-size: 7rem;
         margin-bottom: 0.5rem;
-        color: #ffffff;
+        color: var(--el-text-color-secondary);
         margin-right: 1rem;
     }
 
     span {
         font-size: 3rem;
-        color: #ffffff;
+        color: var(--el-text-color-secondary);
         text-align: center;
     }
 }
@@ -102,7 +102,7 @@
 }
 
 .separator {
-    border-top: 0.3rem solid #ffffff;
+    border-top: 0.3rem solid var(--el-border-color-light);
     width: 100%;
     margin-bottom: 2rem;
 }

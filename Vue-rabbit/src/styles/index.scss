@@ -1,3 +1,8 @@
-@use "./elementPlus/element.scss" as *;
 @use "./global.scss" as *;
+@use "./elementPlus/element.scss" as light;
+@use 'element-plus/theme-chalk/dark/css-vars.css' as dark;
 @use "../assets/fonticon/iconfont.css" as *;
+
+
+//自定义主题色
+// @use './theme/yellow.scss';

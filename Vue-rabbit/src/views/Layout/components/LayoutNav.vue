@@ -42,9 +42,14 @@ onUnmounted(() => {
 
             <div class="nav-menu">
                 <RouterLink to="/" class="nav-link">首页</RouterLink>
-                <p class="nav-link" v-for="item in categoryStore.categoryList" :key="item.id">
-                    <RouterLink :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
-                </p>
+                <RouterLink
+                  v-for="item in categoryStore.categoryList"
+                  :key="item.id"
+                  class="nav-link"
+                  :to="`/category/${item.id}`"
+                >
+                  {{ item.name }}
+                </RouterLink>
 
             </div>
 
@@ -57,15 +62,13 @@ onUnmounted(() => {
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .nav-wrapper {
     width: 100%;
     height: 6.5rem;
-    color: rgb(0, 0, 0);
     position: relative;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
-
     a {
         color: inherit;
         text-decoration: none;
@@ -76,7 +79,7 @@ onUnmounted(() => {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--el-bg-color);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transform: translateZ(0);
@@ -121,11 +124,10 @@ onUnmounted(() => {
     line-height: 6.5rem;
     white-space: nowrap;
     transition: background-color 0.3s;
-
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-    }
+    display: inline-block;
 }
+
+
 
 .login-info {
     display: flex;
@@ -133,9 +135,18 @@ onUnmounted(() => {
     height: 100%;
 
     .separator {
-        border-left: 1px solid #ccc;
+    border-left: 1px solid var(--el-border-color-light);
         height: 1.6rem;
         margin: 0 1rem;
     }
+}
+
+a {
+  color: var(--el-text-color-primary);
+  text-decoration: none;
+}
+
+a:hover{
+  color: var(--el-color-primary);
 }
 </style>

@@ -9,7 +9,7 @@ export const useCategoryStore = defineStore("category", () => {
     try {
       const res = await api.category.GetCategory();
       categoryList.value = res.result;
-      console.log("Category data loaded:", categoryList.value);
+      // console.log("Category data loaded:", categoryList.value);
     } catch (error) {
       console.error("Failed to load category data:", error);
     }
